@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "InspectedChanges",
+  "version": "0.1",
+  "description": "Salva conteúdos html editados inline.",
+  "icons": {
+    "48": "icons/ic-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["inspectsave.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "inspectedchanges@heimatlas.com"
+    }
+  },
+  "devtools_page": "inspectedchanges-page.html"
+}
